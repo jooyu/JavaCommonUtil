@@ -61,7 +61,7 @@ public class CommonUtil {
 					}
 				}else if(args[i] instanceof Integer){
 					now = args[i];
-					int nowInt = (int) now;
+					int nowInt =(Integer) now;
 					if(nowInt!=0){
 						return nowInt;
 					}
