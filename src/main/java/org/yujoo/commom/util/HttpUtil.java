@@ -1,4 +1,4 @@
-package com.dsky.baas.pointsservice.util;
+package org.yujoo.commom.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class HttpUtil {
 		try {
 			URL allUrl = new URL(url);
 			URLConnection connection = allUrl.openConnection();
-			// 获得相应头
+			// 鑾峰緱鐩稿簲澶�
 			headerMap = connection.getHeaderFields();
 			resultBean.setHeader(headerMap);
 			in = new BufferedReader(new InputStreamReader(

@@ -1,4 +1,4 @@
-package com.dsky.baas.pointsservice.util;
+package org.yujoo.commom.util;
 
 import java.util.List;
 import java.util.Map;

@@ -1,19 +1,22 @@
-package com.dsky.baas.pointsservice.util;
-import org.apache.log4j.Logger;
+package org.yujoo.commom.util;
+
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * 
- * @author zen.wang zenyes@gmail.com
+ * @author 
  */
 public class ShareCodeUtil {
 
-    /** 自定义进制(0,1没有加入,容易与o,l混淆) */
+    /** 鑷畾涔夎繘鍒�(0,1娌℃湁鍔犲叆,瀹规槗涓巓,l娣锋穯) */
     private static final char[] r=new char[]{'F', 'L', 'G', 'W', '5', 'X', 'C', '3', '9', 'Z', 'M', '6', '7', 'Y', 'R', 'T', '2', 'H', 'S', '8', 'D', 'V', 'E', 'J', '4', 'K', 'Q', 'P', 'U', 'A', 'N', 'B'};
 
-    /** 进制长度 */
+    /** 杩涘埗闀垮害 */
     private static final int binLen=r.length;
     
-    private static Logger logger = Logger.getLogger(ShareCodeUtil.class);
+    private final static Logger logger = (Logger) LoggerFactory.getLogger(ShareCodeUtil.class);
     
 //    private static final long startNumber = 1048576L;
     private static final long startNumber = 0L;
@@ -22,7 +25,7 @@ public class ShareCodeUtil {
     /**
      * 
      * @param id ID
-     * @return 随机码
+     * @return 闅忔満鐮�
      */
     public static String idToCode(long id,long costomStartNumber) {
     	if(costomStartNumber<0){

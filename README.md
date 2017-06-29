@@ -1,2 +1,0 @@
-# JavaCommonUtil
-工作中总结的一些java的常用函数和实用tools
