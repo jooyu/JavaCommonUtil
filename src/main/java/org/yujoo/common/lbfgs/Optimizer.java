@@ -1,8 +1,13 @@
 package org.yujoo.common.lbfgs;
 
 import org.jblas.DoubleMatrix;
-
+/**
+ * ÓÅ»¯Æ÷
+ * @author eaves.zhu
+ *
+ */
 public class Optimizer {
+	
     protected Problem problem;
 
     public Optimizer(Problem problem) {

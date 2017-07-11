@@ -8,12 +8,14 @@ import org.jblas.DoubleMatrix;
 public class BFGS {
 
     /*
-    * d: The search direction
-    * x: previous iterate
-    * rho :- The backtrack step between (0,1) usually 1/2
+    * d: The search direction  搜索的方向
+    * x: previous iterate   先前的迭代
+    * rho :- The backtrack step between (0,1) usually 1/2 
     * c: parameter between 0 and 1 , usually 10^{-4}
     * http://www.cnblogs.com/kemaswill/p/3416231.html
     */
+	
+	//回溯线性搜索
     protected static double backtrackLineSearch(Optimizer opt, DoubleMatrix d,
             double rho, double c) {
         double lambda = 1;
@@ -27,7 +29,10 @@ public class BFGS {
         return lambda;
     }
 
+    
+    //训练
     public static DoubleMatrix train(Optimizer opt, int Iter, double e) {
+    	//
         int dim = opt.getProblem().getTheta().length;
         DoubleMatrix s = new DoubleMatrix(dim, 1);
         DoubleMatrix y = s.dup();
@@ -52,7 +57,6 @@ public class BFGS {
             D = (I.sub(s.mmul(y.transpose()).div(ys))).mmul(D)
                     .mmul((I.sub(y.mmul(s.transpose()).div(ys))))
                     .add(s.mmul(s.transpose()).div(ys));
-
             System.out.println(k + " - " + opt.getObjectValue() + " - " + g.norm2());
         }
         return opt.getProblem().getTheta();
