@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+			http://www.springframework.org/schema/task  
+			http://www.springframework.org/schema/task/spring-task-3.2.xsd  ">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.peak,test" />
+	
+	<bean id="UnionUserConvert2PeakDataConfig" class="com.peak.cli.model.SDKDb2PeakDataConfig">
+		<property name="union_db_ip" value="192.168.143.39:3306" /><!-- 192.168.0.85:3306 -->
+		<property name="union_user_name" value="root" /><!-- admin -->
+		<property name="union_password" value="abcdabcd" /><!-- d2cD9MKR77Xd -->
+		<property name="union_db_prefix" value="union_users_" />
+		<property name="union_db_hash_min" value="0" />
+		<property name="union_db_hash_max" value="4" />
+		<property name="union_table_prefix" value="tb_openid_playerids_" />
+		<property name="union_table_hash_min" value="0" />
+		<property name="union_table_hash_max" value="99" />
+		<property name="peak_data_db_ip" value="192.168.143.39:3306" />
+		<property name="peak_data_user_name" value="root" />
+		<property name="peak_data_password" value="abcdabcd" />
+		<property name="peak_data_db" value="peak_data_01" />
+		<property name="peak_deal_db" value="peak_deal" />
+		<property name="peak_data_table_prefix" value="user_" />
+		<property name="filter_open_id_list">
+			 <list>  
+				<value>c0ff994af7bf8746208727f49bdacfdd</value>
+				<value>30fccbe73b35ffaca44fa2bd0aaba733</value>
+				<value>cbd9373b6dbc6b64354fb801cf241a03</value>
+				<value>8dc35fcf4e0e1fdaa2ccd60c17111112</value>
+				<value>9887cf3f355f5105c980c9ee2a31c84b</value>
+				<value>01f002c3198d765ab6f61d8e5d6fe2c7</value>
+				<value>494a0b25531418ea31e146261bf6de92</value>
+				<value>2b073a8989972ebb1c8d8c796e642039</value>
+				<value>8dc35fcf4e0e1fdaa2ccd60c17111111</value>
+				<value>8380dc5fd085c3bdad89cffde8199526</value>
+				<value>6a9d76e14709dc9ed74e1b8d8b69333a</value>
+				<value>d8faf39203f35bdd81c56a209c5a9449</value>
+				<value>365c10ba84b9d21b65db8104028d864a</value>
+				<value>1d73841bd73a7035ad6fdee8158defca</value>
+				<value>08905a670793afbc262165ab53fb2b12</value>
+				<value>4913fe678980fc5c9c2a375018d3d771</value>
+				<value>d959127ff80ef90d5c0ebb9797faaf2b</value>
+				<value>aab1b47fe001cd341738e97a0453c053</value>
+				<value>3358a5fa361930a173f14ad9c1488e1a</value>
+				<value>41da4049d676e7e06d3be50bf8e1e050</value>
+				<value>0db7da9aad0dc8305626c0ed5d0a3d85</value>
+				<value>2def13b05b6fa01b2472a91e7849437f</value>
+				<value>ab687663533d4fdd952517bbb9e61cb3</value>
+				<value>5baed252b4809d81f22e921e2845d99a</value>
+				<value>1b8bf6451775637afb79db971459e15c</value>
+				<value>1c2014b1d28f7a0e53d144e384659f50</value>
+				<value>d0060ea48ef189b44b9ce41287afcd73</value>
+				<value>fc5732ab5e729bf24cda556e25f8416c</value>
+				<value>ceff5a4bd6c3acf5310ce08eca28d2e9</value>
+				<value>c651fc304239abf05d0dbf7ac3a76002</value>
+				<value>272e2fb0b31ff76d74e59a707552100a</value>
+				<value>38e352bb485b4713857bfa3f11df9de0</value>
+				<value>2670a60951ddca18c141a0748d60f540</value>
+				<value>f7370418fec95770797eb1f38abd7f8d</value>
+				<value>8718e4afc605edc5dbf4e4568917c538</value>
+				<value>63a188e0d75d482a0194125c63f974fc</value>
+				<value>5bbb2e11db987e2850138126d8cefdcf</value>
+				<value>c07634dc97ae167435ec084b456a9f99</value>
+				<value>98f7baf116d303baa31c6719eb7adfe4</value>
+				<value>029c357cba1af4edd50dc849efdfada7</value>
+				<value>401984e848f70edb4279b4aa5b8a10b1</value>
+				<value>3173ec4802431100e5a23f85ecbdcd8b</value>
+				<value>841152d4dfac2a2ad56e0f727d40dcc0</value>
+				<value>bfd41768aa707ae960918a966f24482c</value>
+				<value>ee1e84c4d2fa5ebae224d664edf2e6fc</value>
+				<value>bfaf520d54ce72e6e0b0966d3056899a</value>
+				<value>42cd214f0ad604a6057bafae3c45d300</value>
+				<value>2f03c972078f96a0563df389ccbec24e</value>
+				<value>eef40b887d13ca67dee0f58f98a63a07</value>
+				<value>b93df50fbb2406836477d5fac19eb551</value>
+				<value>4078a4670402d4941128facb32590fdf</value>
+				<value>64d46d2312e2ccaec9c310950311fb8d</value>
+				<value>66c31e33c96ba7e7d17d2a82caaaab0c</value>
+				<value>b9c344ebac6e01ffae86a444183f912b</value>  
+    		</list>  
+		</property>
+	</bean>
+
+</beans>

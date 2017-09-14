@@ -6,6 +6,27 @@
   
   
   <dependencies>
+<!-- https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp -->
+<dependency>
+    <groupId>commons-dbcp</groupId>
+    <artifactId>commons-dbcp</artifactId>
+    <version>1.4</version>
+</dependency>
+
+  
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.5.RELEASE</version>
+</dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.5.RELEASE</version>
+</dependency>
   
   <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 <dependency>
